@@ -1,0 +1,54 @@
+POKEMON TEAMBUILDER|
+-------------------+
+Teambuilder.py: main file
+
+Pokemon:
+	- Party slot: user input
+	- Pokedex number: input or determined by reading through KantoIndex
+	- Pokemon name: input or determined by reading through KantoIndex
+	- Nickname: not implemented yet
+	- Level: user input
+	- [Moves]: user input
+		- Move 1
+		- Move 2
+		- Move 3
+		- Move 4
+	- [Stats]: determined by reading through NumStats
+		- Base HP
+		- Base Atk
+		- Base Def
+		- Base SpAtk
+		- Base SpDef
+		- Base Speed
+
+
+
+1 | Bulbasaur
+Level 5
+HP: 20 | Atk: 10 | Def: 11 | SpA: 12 | SpD: 12 | Spe: 9
+- Tackle
+- Growl
+- 
+- 
+
+2 | Ivysaur
+Level 5
+HP: 20 | Atk: 10 | Def: 11 | SpA: 12 | SpD: 12 | Spe: 9
+- Tackle
+- Growl
+- 
+- 
+
+Line start: 8(slot - 1) + 1
+ex: Slot 1 -> Line 1
+	Slot 2 -> Line 9
+	Slot 6 -> Line 41
+	
+Flow
+------
+main()
+choice()
+	modify_mode()
+		modify_slot()
+	view_mode()
+		view_slot()
