@@ -1,6 +1,5 @@
-k = open("kantodata.txt", 'r+');
+k = open("pokedata.txt", 'r+');
 for line in k:
-    print(line);
     if "baseStats" in line:
-        with open("kantostats.txt", 'a') as s:
+        with open("AllStats.txt", 'a') as s:
             s.write(line);
