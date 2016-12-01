@@ -1,7 +1,6 @@
 import json
-pokedex = {}
-with open('pokedata.json') as file:
-   temp = json.load(file)
-   for key, value in temp.items():
-       if 'prevo' in value:
-           pokedex[value['species']] = temp[value['prevo']]['species']
+
+with open('pokedata.json', 'r') as dt:
+    dex = json.load(dt);
+    print(dex["bulbasaur"]);
+    print(dex["bulbasaur"]["baseStats"]);
