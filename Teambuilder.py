@@ -19,13 +19,13 @@ class Pokemon(object):
                      self.stats[4], self.stats[5], self.moves[0], self.moves[1], self.moves[2], self.moves[3]));
 
 def from_number_find_name(number):
-    with open("Kanto.txt", 'r') as k:
+    with open("AllPokemon.txt", 'r') as k:
         for i, line in enumerate(k, start = 1):
             if i == number:
                 return line;
 
 def from_name_find_number(name):
-    with open("Kanto.txt", 'r') as k:
+    with open("AllPokemon.txt", 'r') as k:
         for i, line in enumerate(k, start = 1):
             if line.rstrip('\n') == name:
                 return i;
@@ -74,13 +74,6 @@ def parse_lines(num_and_name, level, stats, move1, move2, move3, move4):
     Poke = Pokemon(number, name, level, moves, new_stats);
     return Poke;
 
-def make_kanto_dex():
-    kanto_dex_list = []
-    with open("Kanto with quotes.txt", 'r', encoding = "utf8") as k:
-        for line in k:
-            kanto_dex_list.append(line);
-    kanto_dex = "".join(kanto_dex_list).splitlines();
-
 def choice():
     while True:
         answer = input("Would you like to view, modify, or create Pokemon?: ").lower();
@@ -104,7 +97,7 @@ def create_mode():
         name = input("Enter the name of the Pokemon you'd like to add: ").title();
         if name == 'Q' or name == 'Quit':
             choice();
-        with open("Kanto.txt", 'r') as p:
+        with open("AllPokemon.txt", 'r') as p:
             for line in p:
                 if name == line.rstrip('\n'):
                     New_Poke = create_pokemon(name);
@@ -121,6 +114,8 @@ def create_pokemon(name):
         print("The level must be between 1 and 100.");
         level = input("What level is the Pokemon?: ");
     level = int(level);
+    #yn = input("Would you like to input EVs, IVs, both, or neither? If 'neither' is selected, IVs of 31 and EVs of 0 will be used: ");
+    #if yn == 
     stats = calculate_stats(base_stats, level);
     moves = [''] * 4;
     moves[0] = input("What is the Pokemon's first move?: ").title();
@@ -184,20 +179,11 @@ def modify_slot(slot):
             run_again();
         else:
             print("Please enter either 'Pokemon', 'level', or 'moves'.");
-
-##def change_pokemon(Poke, slot_line):
-##    with open("POKELIST.txt", 'ab+') as p:
-##        for i, line in enumerate(p):
-##            if i == slot_line:
-##                p.write("%s | %s\nLevel %s\nHP: %s | Atk: %s | Def: %s | SpA: %s | SpD: %s | Spe: %s\n- %s\n- %s\n- %s\n- %s\n\n" % \
-##                    (self.number, self.name, self.level, self.stats[0], self.stats[1], self.stats[2], self.stats[3], \
-##                     self.stats[4], self.stats[5], self.moves[0], self.moves[1], self.moves[2], self.moves[3]));
-    run_again();
             
 def modify_pokemon(Poke):
     while True:
         name = input("Enter the name of the Pokemon you'd like to add: ").title();
-        with open("Kanto.txt", 'r') as p:
+        with open("AllPokemon.txt", 'r') as p:
             for line in p:
                 if name == line.rstrip('\n'):
                     Poke.name = name;
@@ -307,3 +293,18 @@ def main():
     choice();
 
 main();
+
+
+##def change_pokemon(Poke, slot_line):
+##    with open("POKELIST.txt", 'ab+') as p:
+##        for i, line in enumerate(p):
+##            if i == slot_line:
+##                p.write("%s | %s\nLevel %s\nHP: %s | Atk: %s | Def: %s | SpA: %s | SpD: %s | Spe: %s\n- %s\n- %s\n- %s\n- %s\n\n" % \
+##                    (self.number, self.name, self.level, self.stats[0], self.stats[1], self.stats[2], self.stats[3], \
+##                     self.stats[4], self.stats[5], self.moves[0], self.moves[1], self.moves[2], self.moves[3]));
+##def make_kanto_dex():
+##    kanto_dex_list = []
+##    with open("Kanto with quotes.txt", 'r', encoding = "utf8") as k:
+##        for line in k:
+##            kanto_dex_list.append(line);
+##    kanto_dex = "".join(kanto_dex_list).splitlines();
