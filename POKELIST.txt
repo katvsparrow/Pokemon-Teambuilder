@@ -1,0 +1,50 @@
+9 | Blastoise
+Ability: Torrent
+Item: Leftovers
+Level 100
+HP: 362 | Atk: 181 | Def: 328 | SpA: 207 | SpD: 246 | Spe: 192
+- Scald
+- Rapid Spin
+- Ice Beam
+- Toxic
+
+1 | Bulbasaur
+Ability: Overgrow
+Item: Leftovers
+Level 5
+HP: 21 | Atk: 11 | Def: 11 | SpA: 13 | SpD: 13 | Spe: 11
+- Vine Whip
+- Tackle
+- Growl
+- Leech Seed
+
+226 | Mantine
+Ability: Water Absorb
+Item: Leftovers
+Level 50
+HP: 160 | Atk: 60 | Def: 90 | SpA: 100 | SpD: 160 | Spe: 90
+- Water Gun
+- Fly
+- Defog
+- Surf
+
+52 | Meowth
+Ability: Pickup
+Item: Leftovers
+Level 10
+HP: 31 | Atk: 17 | Def: 15 | SpA: 16 | SpD: 16 | Spe: 26
+- Bite
+- Scratch
+- Pay Day
+- Feint Attack
+
+1 | Bulbasaur
+Ability: Chlorophyll
+Item: Leftovers
+Level 5
+HP: 21 | Atk: 12 | Def: 11 | SpA: 11 | SpD: 13 | Spe: 11
+- Vine Whip
+- Absorb
+- Tackle
+- Growl
+

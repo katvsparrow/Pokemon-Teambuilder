@@ -3,6 +3,7 @@
 #   The program will store all of the user's submitted Pokemon in a text file that can be read or written to by this program.
 
 from math import floor;
+import json;
 
 class Pokemon(object):
     def __init__(self, number, name, level, moves, stats):
@@ -236,10 +237,10 @@ def view_mode():
             print("That slot doesn't exist!");
 
 def view_slot(slot):
-    slot_line = 8 * (slot - 1);
+    slot_line = 10 * (slot - 1);
     with open("POKELIST.txt", 'r') as p:
         for i, line in enumerate(p):
-            if i >= slot_line and i <= slot_line + 7:
+            if i >= slot_line and i <= slot_line + 9:
                 print(line, end = '');
     run_again();
 
